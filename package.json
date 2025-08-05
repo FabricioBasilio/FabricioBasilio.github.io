@@ -1,0 +1,23 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compilar": "sass styles/style.scss styles/estilos_compilados/style.css",
+    "observar": "sass --watch styles/style.scss styles/estilos_compilados/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FabricioBasilio/meu-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FabricioBasilio/meu-portfolio/issues"
+  },
+  "homepage": "https://github.com/FabricioBasilio/meu-portfolio#readme",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}
