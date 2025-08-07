@@ -113,7 +113,7 @@ main {
     div.habilidades__container {
       width: 95%;
       margin: 0 auto;
-      padding: 3 0px 0;
+      padding: 50px 0 50px 0;
       display: flex;
       flex-direction: column;
       gap: 50px;
@@ -130,7 +130,10 @@ main {
   }
 
   .projetos {
-    margin-bottom: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     // remover margin depois
 
     h2 {
@@ -147,29 +150,96 @@ main {
       flex-direction: column;
       gap: 80px;
       width: 95%;
-      margin: 0 auto;
+      margin: 0 auto 30px auto;
 
       .projetos__cards__card {
-        h3 {
-          font-weight: 200;
-          text-transform: uppercase;
-          color: cor.$title-color;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
 
-        .card__body__descricao {
-          color: cor.$text-color;
-        }
+        .card__body {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          // background-color: blue;
 
-        .card__body__funcionalidades {
-          list-style-type: disc;
-        }
+          h3 {
+            font-weight: 200;
+            text-transform: uppercase;
+            color: cor.$title-color;
+          }
 
-        .card__body__tecnologias {
-          @include mixins.lista_tecnologias(50px, 1.5rem);
+          .card__body__descricao {
+            color: cor.$text-color;
+          }
+
+          .card__body__funcionalidades {
+            list-style-type: disc;
+            margin: 0 auto;
+
+            li {
+              width: fit-content;
+            }
+          }
+
+          .card__body__tecnologias {
+            @include mixins.lista_tecnologias(50px, 1.5rem);
+            justify-content: flex-start;
+            gap: 10px;
+          }
+
+          .card__body__botoes {
+            display: flex;
+            justify-content: space-evenly;
+
+            a button {
+              background-color: transparent;
+              font-size: 1rem;
+              text-transform: uppercase;
+              cursor: pointer;
+              border-radius: 50px;
+              padding: 15px 16px;
+              border: 2px solid cor.$link-color;
+              color: cor.$primary-color;
+            }
+          }
         }
       }
     }
+
+    .projetos__botao_ver_projetos button {
+      background-color: transparent;
+      font-size: 1rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 50px;
+      padding: 15px 16px;
+      border: 2px solid cor.$link-color;
+      color: cor.$primary-color;
+      width: 100%;
+    }
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 }
 
 footer {
