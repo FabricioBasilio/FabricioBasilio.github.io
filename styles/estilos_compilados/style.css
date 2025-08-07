@@ -5,6 +5,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #111217;
   color: #9a9a9c;
@@ -26,6 +34,12 @@ header i {
 nav.nav_mobile {
   border-top: #28292e solid 1px;
   padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #111217;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 2;
 }
 nav.nav_mobile ul {
   display: flex;
@@ -37,6 +51,7 @@ nav.nav_mobile ul a {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  gap: 5px;
 }
 nav.nav_mobile ul a i {
   color: #c7c8c9;
@@ -46,6 +61,10 @@ nav.nav_mobile ul a span {
   color: #9a9a9c;
   text-transform: uppercase;
   font-size: 0.8rem;
+}
+
+footer {
+  margin-bottom: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
