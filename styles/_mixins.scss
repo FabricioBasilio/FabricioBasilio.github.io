@@ -1,0 +1,19 @@
+@mixin lista_tecnologias($tamanho) {
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    border: 1px solid $text-color;
+    border-radius: 50%;
+    width: $tamanho;
+    height: $tamanho;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 2rem;
+      color: $icon-color;
+    }
+  }
+}

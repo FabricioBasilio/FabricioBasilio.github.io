@@ -140,7 +140,31 @@ main .habilidades div.habilidades__container .habilidades__container__tecnologia
   font-size: 2rem;
   color: #c7c8c9;
 }
-
+main .projetos h2 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main .projetos .projetos__cards {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+}
+main .projetos .projetos__cards .projetos__cards__card h3 {
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body__descricao {
+  color: #9a9a9c;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body__funcionalidades {
+  list-style-type: disc;
+}
 footer {
   margin-bottom: 100px;
 }

@@ -1,4 +1,5 @@
 @use "_reset";
+@use "_mixins";
 
 // Cores - dark mode (padrão)
 
@@ -151,6 +152,44 @@ main {
             font-size: 2rem;
             color: $icon-color;
           }
+        }
+      }
+    }
+  }
+
+  .projetos {
+    h2 {
+      font-size: 1.8rem;
+      font-weight: 200;
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .projetos__cards {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      margin: 0 auto;
+
+      .projetos__cards__card {
+        h3 {
+          font-weight: 200;
+          text-transform: uppercase;
+          color: $title-color;
+        }
+
+        .card__body__descricao {
+          color: $text-color;
+        }
+
+        .card__body__funcionalidades {
+          list-style-type: disc;
+        }
+
+        .card__body__tecnologias {
+          // @include mixins.lista_tecnologias(70px)
         }
       }
     }
