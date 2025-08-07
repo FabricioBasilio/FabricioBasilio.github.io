@@ -75,6 +75,7 @@ nav.nav_mobile {
 main {
   .apresentacao {
     margin: 0 auto 200px auto;
+    // Deletar margin bottom depois
     width: 95%;
     display: flex;
     gap: 28px;
@@ -101,7 +102,6 @@ main {
         color: $icon-color;
       }
     }
-    
 
     .apresentacao__botao_ver_projetos button {
       background-color: transparent;
@@ -113,7 +113,34 @@ main {
       padding: 15px 16px;
       border: 2px solid $link-color;
       color: $primary-color;
+    }
+  }
 
+  .habilidades {
+    background-color: $secondary-bg-color;
+    height: 400px;
+
+    div.habilidades__container {
+      width: 95%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      h2 {
+        font-weight: 300;
+        color: $title-color;
+      }
+
+      .habilidades__container__tecnologias {
+        display: flex;
+        justify-content: space-around;
+
+        li i {
+          font-size: 2rem;
+          color: $icon-color;
+        }
+      }
     }
   }
 }
