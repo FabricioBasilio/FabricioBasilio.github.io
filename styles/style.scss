@@ -37,7 +37,7 @@ header {
 }
 
 nav.nav_mobile {
-  border-top: $border-color solid 1px;
+  border-top: 1px solid $border-color;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: $primary-bg-color;
@@ -68,6 +68,52 @@ nav.nav_mobile {
         text-transform: uppercase;
         font-size: 0.8rem;
       }
+    }
+  }
+}
+
+main {
+  .apresentacao {
+    margin: 0 auto 200px auto;
+    width: 95%;
+    display: flex;
+    gap: 28px;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 2.3rem;
+      color: $primary-color;
+    }
+
+    p {
+      font-size: 1.3rem;
+      text-align: initial;
+      color: $text-color;
+    }
+
+    .apresentacao__redes_sociais {
+      display: flex;
+      gap: 15px;
+
+      i {
+        font-size: 1.5rem;
+        color: $icon-color;
+      }
+    }
+    
+
+    .apresentacao__botao_ver_projetos button {
+      background-color: transparent;
+      width: 100%;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 50px;
+      padding: 15px 16px;
+      border: 2px solid $link-color;
+      color: $primary-color;
+
     }
   }
 }
