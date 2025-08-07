@@ -109,11 +109,12 @@ main .apresentacao .apresentacao__botao_ver_projetos button {
 }
 main .habilidades {
   background-color: #28292e;
-  height: 400px;
+  margin-bottom: 300px;
 }
 main .habilidades div.habilidades__container {
   width: 95%;
   margin: 0 auto;
+  padding: 3 0px 0;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -125,6 +126,15 @@ main .habilidades div.habilidades__container h2 {
 main .habilidades div.habilidades__container .habilidades__container__tecnologias {
   display: flex;
   justify-content: space-around;
+}
+main .habilidades div.habilidades__container .habilidades__container__tecnologias li {
+  border: 1px solid #9a9a9c;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main .habilidades div.habilidades__container .habilidades__container__tecnologias li i {
   font-size: 2rem;

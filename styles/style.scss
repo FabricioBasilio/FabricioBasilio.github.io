@@ -118,11 +118,13 @@ main {
 
   .habilidades {
     background-color: $secondary-bg-color;
-    height: 400px;
+    margin-bottom: 300px;
+    // remover margin depois
 
     div.habilidades__container {
       width: 95%;
       margin: 0 auto;
+      padding: 3 0px 0;
       display: flex;
       flex-direction: column;
       gap: 50px;
@@ -136,9 +138,19 @@ main {
         display: flex;
         justify-content: space-around;
 
-        li i {
-          font-size: 2rem;
-          color: $icon-color;
+        li {
+          border: 1px solid $text-color;
+          border-radius: 50%;
+          width: 70px;
+          height: 70px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          i {
+            font-size: 2rem;
+            color: $icon-color;
+          }
         }
       }
     }
