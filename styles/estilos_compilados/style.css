@@ -140,6 +140,9 @@ main .habilidades div.habilidades__container .habilidades__container__tecnologia
   font-size: 2rem;
   color: #c7c8c9;
 }
+main .projetos {
+  margin-bottom: 300px;
+}
 main .projetos h2 {
   font-size: 1.8rem;
   font-weight: 200;
@@ -151,6 +154,7 @@ main .projetos h2 {
 main .projetos .projetos__cards {
   display: flex;
   flex-direction: column;
+  gap: 80px;
   width: 95%;
   margin: 0 auto;
 }

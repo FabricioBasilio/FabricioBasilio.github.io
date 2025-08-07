@@ -130,7 +130,7 @@ main {
   }
 
   .projetos {
-    // margin-bottom: 300px;
+    margin-bottom: 300px;
     // remover margin depois
 
     h2 {
@@ -145,6 +145,7 @@ main {
     .projetos__cards {
       display: flex;
       flex-direction: column;
+      gap: 80px;
       width: 95%;
       margin: 0 auto;
 
