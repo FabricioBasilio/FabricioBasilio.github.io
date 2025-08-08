@@ -324,7 +324,7 @@ main {
 
       .sobre__cursos__acordeao {
         border: 1px solid cor.$border-color;
-        border-radius: 10px;
+        border-radius: 5px;
 
         .acordeao__item {
           .acordeao__item__header {
@@ -333,10 +333,9 @@ main {
             justify-content: space-between;
             gap: 10px;
             align-items: center;
-            background-color: cor.$secondary-bg-color;
+            background-color: transparent;
             width: 100%;
             border: 1px solid cor.$border-color-2;
-            // border-radius: 10px 10px 0 0;
             cursor: pointer;
 
             span,
@@ -344,11 +343,25 @@ main {
               color: cor.$title-color;
               font-size: 1.2rem;
             }
+
+            .bi-caret-down {
+              transition: transform 0.2s linear;
+            }
+
+            &.start {
+              border-radius: 5px 5px 0 0;
+            }
+
+            &.end {
+              border-radius: 0 0 5px 5px;
+            }
           }
 
           .acordeao__item__body {
+            display: none;
+            // display será none primeiro depois flex
+
             padding: 20px;
-            display: flex;
             flex-direction: column;
             gap: 20px;
             font-size: 1.1rem;
@@ -356,6 +369,28 @@ main {
             ul {
               list-style-type: disc;
             }
+          }
+
+          &.active .acordeao__item__header {
+            background-color: cor.$secondary-bg-color;
+
+            &.end {
+              border-radius: 0;
+            }
+          }
+
+          &.active .acordeao__item__body {
+            display: flex;
+            // aparecerá ao ter essa classe
+
+            &.end {
+              border-radius: 0 0 5px 5px;
+            }
+          }
+
+          &.active .bi-caret-down {
+            transform: rotate(180deg);
+            // transition: transform 0.2s linear;
           }
         }
       }

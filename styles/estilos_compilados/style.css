@@ -318,7 +318,7 @@ main .sobre .sobre__cursos {
 }
 main .sobre .sobre__cursos .sobre__cursos__acordeao {
   border: 1px solid #28292e;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header {
   padding: 10px;
@@ -326,7 +326,7 @@ main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__i
   justify-content: space-between;
   gap: 10px;
   align-items: center;
-  background-color: #28292e;
+  background-color: transparent;
   width: 100%;
   border: 1px solid #c7c8c9;
   cursor: pointer;
@@ -336,15 +336,39 @@ main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__i
   color: #f0f0f0;
   font-size: 1.2rem;
 }
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header .bi-caret-down {
+  transition: transform 0.2s linear;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header.start {
+  border-radius: 5px 5px 0 0;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header.end {
+  border-radius: 0 0 5px 5px;
+}
 main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__body {
+  display: none;
   padding: 20px;
-  display: flex;
   flex-direction: column;
   gap: 20px;
   font-size: 1.1rem;
 }
 main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__body ul {
   list-style-type: disc;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__header {
+  background-color: #28292e;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__header.end {
+  border-radius: 0;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__body {
+  display: flex;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__body.end {
+  border-radius: 0 0 5px 5px;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .bi-caret-down {
+  transform: rotate(180deg);
 }
 main .contato {
   border-top: 1px solid #28292e;
