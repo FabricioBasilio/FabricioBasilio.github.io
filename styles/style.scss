@@ -220,26 +220,74 @@ main {
     }
   }
 
+  .sobre {
+    width: 95%;
+    margin: 0 auto;
+
+    .sobre__perfil {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      // sera row no responsivo
+
+      margin-bottom: 500px;
+
+      .sobre__perfil__foto_perfil {
+        border-radius: 50%;
+        width: 245px;
+        height: 270px;
+      }
+
+      .sobre__perfil__descricao {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h2 {
+          font-size: 1.8rem;
+          font-weight: 200;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          color: cor.$primary-color;
+        }
+
+        .descricao__icones {
+          i {
+            color: cor.$icon-color;
+          }
+
+          span {
+            color: cor.$primary-color;
+          }
+        }
+
+        .descricao__botoes {
+          display: flex;
+          justify-content: space-evenly;
+
+          a button {
+            background-color: transparent;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 50px;
+            padding: 15px 16px;
+            border: 2px solid cor.$link-color;
+            color: cor.$primary-color;
+          }
+        }
+      }
+    }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
+    .sobre__formacao {
+      
+    }
+  }
 }
 
 footer {

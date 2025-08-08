@@ -230,7 +230,55 @@ main .projetos .projetos__botao_ver_projetos button {
   color: #f0f0f0;
   width: 100%;
 }
-
+main .sobre {
+  width: 95%;
+  margin: 0 auto;
+}
+main .sobre .sobre__perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 500px;
+}
+main .sobre .sobre__perfil .sobre__perfil__foto_perfil {
+  border-radius: 50%;
+  width: 245px;
+  height: 270px;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao h2 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #f0f0f0;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones i {
+  color: #c7c8c9;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones span {
+  color: #f0f0f0;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes a button {
+  background-color: transparent;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px 16px;
+  border: 2px solid #9a9a9c;
+  color: #f0f0f0;
+}
 footer {
   margin-bottom: 100px;
 }
