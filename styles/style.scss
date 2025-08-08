@@ -1,5 +1,4 @@
 @use "_reset";
-@use "_mixins";
 
 :root,
 :root[data-theme="dark"] {
@@ -41,10 +40,29 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 20px;
   padding: 20px;
+  width: 100%;
+
+  .nav_desktop {
+    display: none;
+    // none para mobile
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      width: 500px;
+
+      li a {
+        text-decoration: none;
+        color: var(--link-color);
+        text-transform: uppercase;
+      }
+    }
+  }
 
   i {
     color: var(--icon-color);
@@ -53,7 +71,7 @@ header {
   }
 }
 
-nav.nav_mobile {
+.nav_mobile {
   border-top: 1px solid var(--border-color);
   padding-top: 10px;
   padding-bottom: 10px;
@@ -528,5 +546,35 @@ footer {
       text-decoration: none;
       color: var(--primary-color);
     }
+  }
+}
+
+// Responsividade
+@media (min-width: 770px) {
+  header {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    margin-top: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+  }
+
+  .nav_mobile {
+    display: none;
+  }
+
+  nav.nav_desktop {
+    display: block;
+  }
+
+  main {
+    margin-top: 100px;
+  }
+
+  footer {
+    margin-bottom: 50px;
   }
 }

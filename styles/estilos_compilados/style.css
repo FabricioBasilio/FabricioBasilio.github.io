@@ -53,10 +53,25 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 20px;
   padding: 20px;
+  width: 100%;
+}
+header .nav_desktop {
+  display: none;
+}
+header .nav_desktop ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 500px;
+}
+header .nav_desktop ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+  text-transform: uppercase;
 }
 header i {
   color: var(--icon-color);
@@ -64,7 +79,7 @@ header i {
   cursor: pointer;
 }
 
-nav.nav_mobile {
+.nav_mobile {
   border-top: 1px solid var(--border-color);
   padding-top: 10px;
   padding-bottom: 10px;
@@ -74,23 +89,23 @@ nav.nav_mobile {
   width: 100vw;
   z-index: 2;
 }
-nav.nav_mobile ul {
+.nav_mobile ul {
   display: flex;
   list-style: none;
   justify-content: space-around;
 }
-nav.nav_mobile ul a {
+.nav_mobile ul a {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   gap: 5px;
 }
-nav.nav_mobile ul a i {
+.nav_mobile ul a i {
   color: var(--icon-color);
   font-size: 2rem;
 }
-nav.nav_mobile ul a span {
+.nav_mobile ul a span {
   color: var(--link-color);
   text-transform: uppercase;
   font-size: 0.8rem;
@@ -457,6 +472,31 @@ footer p {
 footer p a {
   text-decoration: none;
   color: var(--primary-color);
+}
+
+@media (min-width: 770px) {
+  header {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    margin-top: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+  }
+  .nav_mobile {
+    display: none;
+  }
+  nav.nav_desktop {
+    display: block;
+  }
+  main {
+    margin-top: 100px;
+  }
+  footer {
+    margin-bottom: 50px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
