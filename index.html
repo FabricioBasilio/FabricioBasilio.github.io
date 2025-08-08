@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
   </head>
   <body>
     <header>
-      <i class="bi bi-sun"></i>
+      <i id="toggleTheme" class="bi bi-sun"></i>
     </header>
     <nav class="nav_mobile">
       <ul>
@@ -72,12 +72,14 @@
         </a>
       </section>
       <section class="habilidades">
-        <h2>Conhecimento nas principais tecnologias do mercado</h2>
-        <ul class="habilidades__tecnologias">
-          <li><i class="bi bi-css"></i></li>
-          <li><i class="bi bi-javascript"></i></li>
-          <li><i class="bi bi-filetype-sass"></i></li>
-        </ul>
+        <div class="habilidades__container">
+          <h2>Conhecimento nas principais tecnologias do mercado</h2>
+          <ul class="habilidades__container__tecnologias">
+            <li><i class="bi bi-css"></i></li>
+            <li><i class="bi bi-javascript"></i></li>
+            <li><i class="bi bi-filetype-sass"></i></li>
+          </ul>
+        </div>
       </section>
       <section class="projetos">
         <h2 id="projetos">Projetos</h2>
@@ -182,64 +184,76 @@
               </div>
             </section>
           </section>
-          <a
-            href="https://github.com/FabricioBasilio?tab=repositories"
-            target="_blank"
-            ><button>
-              <span>ver todos os projetos</span>
-              <i class="bi bi-arrow-up-right"></i></button
-          ></a>
         </div>
+        <a
+          href="https://github.com/FabricioBasilio?tab=repositories"
+          target="_blank"
+          class="projetos__botao_ver_projetos"
+          ><button>
+            <span>ver todos os projetos</span>
+            <i class="bi bi-arrow-up-right"></i></button
+        ></a>
       </section>
       <section class="sobre">
         <section class="sobre__perfil">
           <img
             src="./assets/foto-perfil-2.jpg"
             alt="Foto de perfil do desenvolvedor front-end Fabrício Basílio"
+            class="sobre__perfil__foto_perfil"
           />
-          <h2 id="sobre">Sobre mim</h2>
-          <p>
-            Sou um desenvolvedor front-end. Tenho conhecimento em HTML5, CSS3 e
-            Javascript. Desenvolvi projetos simples, mas que marcam o início de
-            minha jornada com tal área.
-          </p>
-          <div class="sobre__perfil__icones">
-            <i class="bi bi-translate"></i>
-            <span>Inglês intermediário</span>
-          </div>
-          <div class="sobre__perfil__botoes">
-            <a
-              href="https://www.linkedin.com/in/fabricio-basilio-front-end/"
-              target="_blank"
-              ><button>
-                <span>Conecte-se comigo</span
-                ><i class="bi bi-arrow-up-right"> </i></button></a
-            ><a href="#" target="_blank"
-              ><button><span>currículo</span></button></a
-            >
+          <div class="sobre__perfil__descricao">
+            <h2 id="sobre">Sobre mim</h2>
+            <p>
+              Sou um desenvolvedor front-end. Tenho conhecimento em HTML5, CSS3
+              e Javascript. Desenvolvi projetos simples, mas que marcam o início
+              de minha jornada com tal área.
+            </p>
+            <div class="descricao__icones">
+              <i class="bi bi-translate"></i>
+              <span>Inglês intermediário</span>
+            </div>
+            <div class="descricao__botoes">
+              <a
+                href="https://www.linkedin.com/in/fabricio-basilio-front-end/"
+                target="_blank"
+                ><button>
+                  <span>Conecte-se comigo</span
+                  ><i class="bi bi-arrow-up-right"> </i></button></a
+              ><a href="#" target="_blank"
+                ><button><span>currículo</span></button></a
+              >
+            </div>
           </div>
         </section>
         <section class="sobre__formacao">
           <h3>Formação</h3>
-          <h4>Ciência da computação</h4>
-          <span>Jun 2023 - Jun 2028 (em andamento)</span>
-          <div class="sobre__formacao__icones">
-            <i class="bi bi-bank"></i>
-            <span>UNIFAP - Universidade Federal do Amapá</span>
-          </div>
-
-          <h4>Curso Técnico em Informática</h4>
-          <span>Ago 2024 - Dez 2025 (em andamento)</span>
-          <div class="sobre__formacao__icones">
-            <i class="bi bi-bank"></i>
-            <span>SENAI - Serviço Nacional de Aprendizagem Industrial</span>
+          <div class="sobre__formacao__cards">
+            <section class="formacao__cards__card">
+              <h4>Ciência da computação - Bacharelado</h4>
+              <span>Jun 2023 - Jun 2028 (em andamento)</span>
+              <div class="sobre__formacao__icones">
+                <i class="bi bi-bank"></i>
+                <span>UNIFAP - Universidade Federal do Amapá</span>
+              </div>
+            </section>
+            <section class="formacao__cards__card">
+              <h4>Curso Técnico em Informática</h4>
+              <span>Ago 2024 - Dez 2025 (em andamento)</span>
+              <div class="sobre__formacao__icones">
+                <i class="bi bi-bank"></i>
+                <span>SENAI - Serviço Nacional de Aprendizagem Industrial</span>
+              </div>
+            </section>
           </div>
         </section>
         <section class="sobre__cursos">
           <h3>Cursos</h3>
-          <div class="acordeao">
+          <div class="sobre__cursos__acordeao">
             <div class="acordeao__item">
-              <button><span>Versionamento de Código com Git e GitHub</span><i class="bi bi-caret-down"></i></button>
+              <button class="acordeao__item__header start">
+                <span>Versionamento de Código com Git e GitHub</span
+                ><i class="bi bi-caret-down"></i>
+              </button>
               <div class="acordeao__item__body">
                 <p>Digital Innovation One. Jul 2025. 2h.</p>
                 <p>
@@ -256,33 +270,68 @@
                 </ul>
               </div>
             </div>
+            <div class="acordeao__item">
+              <button class="acordeao__item__header">
+                <span>Estilizações Básicas com CSS</span
+                ><i class="bi bi-caret-down"></i>
+              </button>
+              <div class="acordeao__item__body">
+                <p>Digital Innovation One. Jul 2025. 6h.</p>
+                <p>
+                  Aplicação de cores e sombras nos elementos. Estilização de imagens, de bordas e de fundos dos elementos. Trabalho com fontes como também com textos. E outras propriedades como transparência dos elementos, lidar com elementos maiores que o container e aplicação de redefinição das propriedades CSS padrão dos navegadores.
+                </p>
+                <ul class="body__habilidades">
+                  <li>Estilização com CSS;</li>
+                  <li>Aplicação de redefinição das propriedades CSS padrão dos navegadores.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="acordeao__item">
+              <button class="acordeao__item__header end">
+                <span>Responsividade no CSS</span
+                ><i class="bi bi-caret-down"></i>
+              </button>
+              <div class="acordeao__item__body end">
+                <p>Digital Innovation One. Jul 2025. 3h.</p>
+                <p>
+                  O que é o Design Responsivo. Uso de Layouts flexíveis com multicolunas, com FlexBox e com Grid. O que é a meta tag viewport. O que são Media Queries (Estrutura e Media types). O que são Media Features, operadores lógicos nos Media Queries como também como usar as Media Queries. Breakpoints. Como deixar as imagens e a tipografia responsivas. Aplicação da abordagem Mobile First.
+                </p>
+                <ul class="body__habilidades">
+                  <li>Uso do FlexBox.</li>
+                  <li>Uso de Media Queries.</li>
+                  <li>Aplicação da abordagem Mobile First</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
       </section>
 
       <section class="contato">
-        <h2 id="contato">Contate-me</h2>
-        <p>
-          Contate-me via e-mail e conecte-se comigo através das minhas redes
-          sociais.
-        </p>
-        <ul>
-          <li>
-            <a href="https://github.com/FabricioBasilio" target="_blank"
-              ><i class="bi bi-github"></i><span>GitHub</span></a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/fabricio-basilio-front-end/"
-              target="_blank"
-              ><i class="bi bi-linkedin"></i><span>LinkedIn</span></a
-            >
-          </li>
-        </ul>
-        <a href="#"
-          ><button><span>fabriciobasilioo@gmail.com</span></button></a
-        >
+        <div class="contato__container">
+          <h2 id="contato">Contate-me</h2>
+          <p>
+            Contate-me via e-mail e conecte-se comigo através das minhas redes
+            sociais.
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/FabricioBasilio" target="_blank"
+                ><i class="bi bi-github"></i><span>GitHub</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/fabricio-basilio-front-end/"
+                target="_blank"
+                ><i class="bi bi-linkedin"></i><span>LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <a href="#" class="contato__container__botao_email"
+            ><button><span>fabriciobasilioo@gmail.com</span></button></a
+          >
+        </div>
       </section>
     </main>
     <footer>
@@ -294,5 +343,6 @@
         >.
       </p>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

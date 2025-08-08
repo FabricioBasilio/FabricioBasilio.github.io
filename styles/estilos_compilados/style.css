@@ -5,9 +5,50 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  text-align: justify;
+}
+
+:root,
+:root[data-theme=dark] {
+  --primary-color: #f0f0f0;
+  --primary-bg-color: #111217;
+  --secondary-bg-color: #28292e;
+  --border-color: #28292e;
+  --border-color-2: #c7c8c9;
+  --title-color: #f0f0f0;
+  --text-color: #9a9a9c;
+  --link-color: #9a9a9c;
+  --icon-color: #c7c8c9;
+}
+
+:root[data-theme=light] {
+  --primary-color: #0b0b0f;
+  --primary-bg-color: #e9e9e9;
+  --secondary-bg-color: #c7c8c9;
+  --border-color: #c7c8c9;
+  --border-color-2: #9a9a9c;
+  --title-color: #0b0b0f;
+  --text-color: #28292e;
+  --link-color: #28292e;
+  --icon-color: #56575a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #111217;
-  color: #9a9a9c;
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
 }
 
 header {
@@ -18,14 +59,20 @@ header {
   padding: 20px;
 }
 header i {
-  color: #c7c8c9;
+  color: var(--icon-color);
   font-size: 24px;
   cursor: pointer;
 }
 
 nav.nav_mobile {
-  border-top: #28292e solid 1px;
+  border-top: 1px solid var(--border-color);
   padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--primary-bg-color);
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 2;
 }
 nav.nav_mobile ul {
   display: flex;
@@ -37,15 +84,379 @@ nav.nav_mobile ul a {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
+  gap: 5px;
 }
 nav.nav_mobile ul a i {
-  color: #c7c8c9;
+  color: var(--icon-color);
   font-size: 2rem;
 }
 nav.nav_mobile ul a span {
-  color: #9a9a9c;
+  color: var(--link-color);
   text-transform: uppercase;
   font-size: 0.8rem;
+}
+
+main {
+  margin-bottom: 30px;
+}
+main .apresentacao {
+  margin: 0 auto 200px auto;
+  width: 95%;
+  display: flex;
+  gap: 28px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .apresentacao h1 {
+  font-size: 2.3rem;
+  color: var(--primary-color);
+}
+main .apresentacao p {
+  font-size: 1.3rem;
+  text-align: initial;
+  color: var(--text-color);
+}
+main .apresentacao .apresentacao__redes_sociais {
+  display: flex;
+  gap: 15px;
+}
+main .apresentacao .apresentacao__redes_sociais i {
+  font-size: 1.5rem;
+  color: var(--icon-color);
+}
+main .apresentacao .apresentacao__botao_ver_projetos button {
+  background-color: transparent;
+  width: 100%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px 16px;
+  border: 2px solid var(--link-color);
+  color: var(--primary-color);
+}
+main .habilidades {
+  background-color: var(--secondary-bg-color);
+  margin-bottom: 300px;
+}
+main .habilidades div.habilidades__container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 50px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+main .habilidades div.habilidades__container h2 {
+  font-weight: 300;
+  color: var(--title-color);
+}
+main .habilidades div.habilidades__container .habilidades__container__tecnologias {
+  display: flex;
+  justify-content: space-around;
+}
+main .habilidades div.habilidades__container .habilidades__container__tecnologias li {
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .habilidades div.habilidades__container .habilidades__container__tecnologias li i {
+  font-size: 2rem;
+  color: var(--icon-color);
+}
+main .projetos {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .projetos h2 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main .projetos .projetos__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 95%;
+  margin: 0 auto 30px auto;
+}
+main .projetos .projetos__cards .projetos__cards__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body h3 {
+  font-weight: 200;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__descricao {
+  color: var(--text-color);
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades {
+  list-style-type: disc;
+  margin: 0 auto;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades li {
+  width: fit-content;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias li {
+  border: 1px solid var(--text-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias li i {
+  font-size: 1.7rem;
+  color: var(--icon-color);
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__botoes {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__botoes a button {
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px 16px;
+  border: 2px solid var(--link-color);
+  color: var(--primary-color);
+}
+main .projetos .projetos__botao_ver_projetos button {
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px 16px;
+  border: 2px solid var(--link-color);
+  color: var(--primary-color);
+  width: 100%;
+}
+main .sobre {
+  width: 95%;
+  margin: 0 auto;
+}
+main .sobre h3 {
+  font-weight: 200;
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-size: 1.5rem;
+}
+main .sobre h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+main .sobre .sobre__perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 500px;
+}
+main .sobre .sobre__perfil .sobre__perfil__foto_perfil {
+  border-radius: 50%;
+  width: 245px;
+  height: 270px;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao h2 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones i {
+  color: var(--icon-color);
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones span {
+  color: var(--primary-color);
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes {
+  display: flex;
+  justify-content: space-evenly;
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes a button {
+  background-color: transparent;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px 16px;
+  border: 2px solid var(--link-color);
+  color: var(--primary-color);
+}
+main .sobre .sobre__formacao {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 300px;
+  color: var(--primary-color);
+}
+main .sobre .sobre__formacao .sobre__formacao__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+main .sobre .sobre__formacao .sobre__formacao__cards .formacao__cards__card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .sobre .sobre__cursos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 300px;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid var(--border-color-2);
+  cursor: pointer;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header span,
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header i {
+  color: var(--title-color);
+  font-size: 1.2rem;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header .bi-caret-down {
+  transition: transform 0.2s linear;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header.start {
+  border-radius: 5px 5px 0 0;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__header.end {
+  border-radius: 0 0 5px 5px;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__body {
+  display: none;
+  padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.1rem;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__body ul {
+  list-style-type: disc;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__header {
+  background-color: var(--secondary-bg-color);
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__header.end {
+  border-radius: 0;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__body {
+  display: flex;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__body.end {
+  border-radius: 0 0 5px 5px;
+}
+main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .bi-caret-down {
+  transform: rotate(180deg);
+}
+main .contato {
+  border-top: 1px solid var(--border-color);
+  padding-top: 30px;
+}
+main .contato a {
+  text-decoration: none;
+}
+main .contato .contato__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 95%;
+  margin: 0 auto;
+}
+main .contato .contato__container h2 {
+  font-size: 1.8rem;
+  font-weight: 200;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main .contato .contato__container p {
+  text-align: center;
+}
+main .contato .contato__container ul {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+main .contato .contato__container ul li i,
+main .contato .contato__container ul li span {
+  color: var(--text-color);
+}
+main .contato .contato__container ul li i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+main .contato .contato__container ul li span {
+  font-size: 1.3rem;
+}
+main .contato .contato__container .contato__container__botao_email button {
+  background-color: transparent;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 15px 16px;
+  border: 2px solid var(--link-color);
+  color: var(--primary-color);
+}
+
+footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 30px;
+  margin-bottom: 100px;
+}
+footer p {
+  text-align: center;
+}
+footer p a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 /*# sourceMappingURL=style.css.map */
