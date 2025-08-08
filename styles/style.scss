@@ -111,11 +111,11 @@ main {
   margin-bottom: 30px;
 
   .apresentacao {
-    margin: 0 auto 200px auto;
+    margin: 0 auto 100px auto;
     // Deletar margin bottom depois
     width: 95%;
     display: flex;
-    gap: 28px;
+    gap: 30px;
     flex-direction: column;
     justify-content: space-between;
 
@@ -147,7 +147,7 @@ main {
       text-transform: uppercase;
       cursor: pointer;
       border-radius: 50px;
-      padding: 15px 16px;
+      padding: 15px 30px;
       border: 2px solid var(--link-color);
       color: var(--primary-color);
     }
@@ -158,11 +158,12 @@ main {
     margin-bottom: 300px;
     // remover margin depois
 
-    div.habilidades__container {
+    .habilidades__container {
       width: 95%;
       margin: 0 auto;
       padding: 50px 0 50px 0;
       display: flex;
+      align-items: center;
       flex-direction: column;
       gap: 50px;
 
@@ -174,6 +175,7 @@ main {
       .habilidades__container__tecnologias {
         display: flex;
         justify-content: space-around;
+        gap: 50px;
 
         li {
           border: 1px solid var(--text-color);
@@ -572,6 +574,45 @@ footer {
 
   main {
     margin-top: 100px;
+
+    .apresentacao {
+      max-width: 1100px;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .apresentacao__redes_sociais {
+        i {
+          font-size: 1.8rem;
+        }
+      }
+
+      .apresentacao__botao_ver_projetos button {
+        width: auto;
+      }
+    }
+
+    .habilidades {
+      .habilidades__container {
+        max-width: 1100px;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h2 {
+          width: 60%;
+          font-size: 2.5rem;
+        }
+
+        .habilidades__container__tecnologias {
+          width: 40%;
+        }
+      }
+    }
   }
 
   footer {

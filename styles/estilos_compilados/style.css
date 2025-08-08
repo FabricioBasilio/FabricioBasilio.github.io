@@ -115,10 +115,10 @@ main {
   margin-bottom: 30px;
 }
 main .apresentacao {
-  margin: 0 auto 200px auto;
+  margin: 0 auto 100px auto;
   width: 95%;
   display: flex;
-  gap: 28px;
+  gap: 30px;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -146,7 +146,7 @@ main .apresentacao .apresentacao__botao_ver_projetos button {
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 50px;
-  padding: 15px 16px;
+  padding: 15px 30px;
   border: 2px solid var(--link-color);
   color: var(--primary-color);
 }
@@ -154,23 +154,25 @@ main .habilidades {
   background-color: var(--secondary-bg-color);
   margin-bottom: 300px;
 }
-main .habilidades div.habilidades__container {
+main .habilidades .habilidades__container {
   width: 95%;
   margin: 0 auto;
   padding: 50px 0 50px 0;
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 50px;
 }
-main .habilidades div.habilidades__container h2 {
+main .habilidades .habilidades__container h2 {
   font-weight: 300;
   color: var(--title-color);
 }
-main .habilidades div.habilidades__container .habilidades__container__tecnologias {
+main .habilidades .habilidades__container .habilidades__container__tecnologias {
   display: flex;
   justify-content: space-around;
+  gap: 50px;
 }
-main .habilidades div.habilidades__container .habilidades__container__tecnologias li {
+main .habilidades .habilidades__container .habilidades__container__tecnologias li {
   border: 1px solid var(--text-color);
   border-radius: 50%;
   width: 60px;
@@ -179,7 +181,7 @@ main .habilidades div.habilidades__container .habilidades__container__tecnologia
   justify-content: center;
   align-items: center;
 }
-main .habilidades div.habilidades__container .habilidades__container__tecnologias li i {
+main .habilidades .habilidades__container .habilidades__container__tecnologias li i {
   font-size: 2rem;
   color: var(--icon-color);
 }
@@ -493,6 +495,33 @@ footer p a {
   }
   main {
     margin-top: 100px;
+  }
+  main .apresentacao {
+    max-width: 1100px;
+  }
+  main .apresentacao h1 {
+    font-size: 3rem;
+  }
+  main .apresentacao p {
+    font-size: 1.5rem;
+  }
+  main .apresentacao .apresentacao__redes_sociais i {
+    font-size: 1.8rem;
+  }
+  main .apresentacao .apresentacao__botao_ver_projetos button {
+    width: auto;
+  }
+  main .habilidades .habilidades__container {
+    max-width: 1100px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .habilidades .habilidades__container h2 {
+    width: 60%;
+    font-size: 2.5rem;
+  }
+  main .habilidades .habilidades__container .habilidades__container__tecnologias {
+    width: 40%;
   }
   footer {
     margin-bottom: 50px;
