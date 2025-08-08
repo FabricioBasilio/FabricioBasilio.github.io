@@ -224,6 +224,19 @@ main {
     width: 95%;
     margin: 0 auto;
 
+    h3 {
+      font-weight: 200;
+      text-transform: uppercase;
+      color: cor.$title-color;
+      font-size: 1.5rem;
+    }
+
+    h4 {
+      font-weight: 600;
+      text-transform: uppercase;
+      color: cor.$title-color;
+    }
+
     .sobre__perfil {
       display: flex;
       flex-direction: column;
@@ -281,11 +294,24 @@ main {
       }
     }
 
-
-
-
     .sobre__formacao {
-      
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 300px;
+      color: cor.$primary-color;
+
+      .sobre__formacao__cards {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .formacao__cards__card {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+      }
     }
   }
 }
