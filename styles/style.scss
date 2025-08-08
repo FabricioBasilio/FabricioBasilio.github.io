@@ -319,7 +319,46 @@ main {
     .sobre__cursos {
       display: flex;
       flex-direction: column;
+      gap: 20px;
       margin-bottom: 300px;
+
+      .sobre__cursos__acordeao {
+        border: 1px solid cor.$border-color;
+        border-radius: 10px;
+
+        .acordeao__item {
+          .acordeao__item__header {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+            background-color: cor.$secondary-bg-color;
+            width: 100%;
+            border: 1px solid cor.$border-color-2;
+            // border-radius: 10px 10px 0 0;
+            cursor: pointer;
+
+            span,
+            i {
+              color: cor.$title-color;
+              font-size: 1.2rem;
+            }
+          }
+
+          .acordeao__item__body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 1.1rem;
+
+            ul {
+              list-style-type: disc;
+            }
+          }
+        }
+      }
     }
   }
 
