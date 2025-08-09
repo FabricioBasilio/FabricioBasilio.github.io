@@ -111,9 +111,6 @@ header i {
   font-size: 0.8rem;
 }
 
-main {
-  margin-bottom: 30px;
-}
 main .apresentacao {
   margin: 0 auto 100px auto;
   width: 95%;
@@ -152,7 +149,7 @@ main .apresentacao .apresentacao__botao_ver_projetos button {
 }
 main .habilidades {
   background-color: var(--secondary-bg-color);
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 main .habilidades .habilidades__container {
   width: 95%;
@@ -186,7 +183,7 @@ main .habilidades .habilidades__container .habilidades__container__tecnologias l
   color: var(--icon-color);
 }
 main .projetos {
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -195,7 +192,7 @@ main .projetos h2 {
   font-size: 1.8rem;
   font-weight: 200;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -298,7 +295,7 @@ main .sobre .sobre__perfil {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-bottom: 500px;
+  margin-bottom: 100px;
 }
 main .sobre .sobre__perfil .sobre__perfil__foto_perfil {
   border-radius: 50%;
@@ -349,7 +346,7 @@ main .sobre .sobre__formacao {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   color: var(--primary-color);
 }
 main .sobre .sobre__formacao .sobre__formacao__cards {
@@ -366,7 +363,7 @@ main .sobre .sobre__cursos {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 main .sobre .sobre__cursos .sobre__cursos__acordeao {
   border: 1px solid var(--border-color);
@@ -426,6 +423,7 @@ main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .bi-c
 main .contato {
   border-top: 1px solid var(--border-color);
   padding-top: 30px;
+  margin-bottom: 30px;
 }
 main .contato a {
   text-decoration: none;
@@ -491,7 +489,6 @@ footer p a {
 @media (min-width: 770px) {
   header {
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 25px;
     margin-top: 0;
     position: fixed;
     z-index: 2;

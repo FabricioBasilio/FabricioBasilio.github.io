@@ -1,9 +1,7 @@
-// tema escolhido pelo usuario ao carregar
 const rootHtml = document.documentElement;
 const toggleTheme = document.getElementById("toggleTheme");
 const tema = localStorage.getItem("tema");
 
-// quando o usuario acessar pela primeira vez ou se ele nunca clicou para alterar o tema antes
 
 if (tema && tema === "dark") {
   toggleTheme.classList.remove("bi-moon-stars");
@@ -16,7 +14,6 @@ if (tema && tema === "dark") {
 }
 
 
-// interação do botão de tema
 
 toggleTheme.addEventListener("click", changeTheme);
 
@@ -35,7 +32,6 @@ function changeTheme() {
   toggleTheme.classList.toggle("bi-moon-stars");
 }
 
-// estado ativo dos links
 const menuLinks = document.querySelectorAll(".nav_desktop a");
 console.log(menuLinks);
 
@@ -46,7 +42,6 @@ menuLinks.forEach((menuLink) => {
   });
 });
 
-// interatividade do acordeao
 const acordeaoHeaders = document.querySelectorAll(".acordeao__item__header");
 
 acordeaoHeaders.forEach((header) => {
