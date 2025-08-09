@@ -60,6 +60,11 @@ header {
         text-decoration: none;
         color: var(--link-color);
         text-transform: uppercase;
+
+        &.active {
+          font-weight: 800;
+          color: var(--primary-color);
+        }
       }
     }
   }

@@ -8,10 +8,21 @@ function changeTheme() {
 
   if (currentTheme === "dark") rootHtml.setAttribute("data-theme", "light");
   else rootHtml.setAttribute("data-theme", "dark");
-    
+
   toggleTheme.classList.toggle("bi-sun");
   toggleTheme.classList.toggle("bi-moon-stars");
 }
+
+// estado ativo dos links
+const menuLinks = document.querySelectorAll(".nav_desktop a");
+console.log(menuLinks);
+
+menuLinks.forEach((menuLink) => {
+  menuLink.addEventListener("click", () => {
+    menuLinks.forEach((i) => i.classList.remove("active"));
+    menuLink.classList.add("active");
+  });
+});
 
 // interatividade do acordeao
 const acordeaoHeaders = document.querySelectorAll(".acordeao__item__header");
