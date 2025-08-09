@@ -5,10 +5,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-img {
-  width: 100%;
-}
-
 ul {
   list-style: none;
 }
@@ -175,8 +171,8 @@ main .habilidades .habilidades__container .habilidades__container__tecnologias {
 main .habilidades .habilidades__container .habilidades__container__tecnologias li {
   border: 1px solid var(--text-color);
   border-radius: 50%;
-  width: 60px;
-  height: 3.5rem;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,6 +207,12 @@ main .projetos .projetos__cards .projetos__cards__card {
   flex-direction: column;
   gap: 10px;
 }
+main .projetos .projetos__cards .projetos__cards__card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+}
 main .projetos .projetos__cards .projetos__cards__card .card__body {
   display: flex;
   flex-direction: column;
@@ -228,9 +230,6 @@ main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__
   list-style-type: disc;
   margin: 0 auto;
 }
-main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades li {
-  width: fit-content;
-}
 main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias {
   display: flex;
   justify-content: flex-start;
@@ -239,8 +238,8 @@ main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__
 main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias li {
   border: 1px solid var(--text-color);
   border-radius: 50%;
-  width: 50px;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,6 +313,9 @@ main .sobre .sobre__perfil .sobre__perfil__descricao h2 {
   letter-spacing: 2px;
   color: var(--primary-color);
 }
+main .sobre .sobre__perfil .sobre__perfil__descricao p {
+  font-size: 1rem;
+}
 main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones i {
   color: var(--icon-color);
 }
@@ -333,6 +335,9 @@ main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes a button
   padding: 15px 16px;
   border: 2px solid var(--link-color);
   color: var(--primary-color);
+}
+main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes .descricao__botoes__conecte_se span {
+  margin-right: 10px;
 }
 main .sobre .sobre__formacao {
   display: flex;
@@ -522,6 +527,82 @@ footer p a {
   }
   main .habilidades .habilidades__container .habilidades__container__tecnologias {
     width: 40%;
+  }
+  main .habilidades .habilidades__container .habilidades__container__tecnologias li {
+    width: 4rem;
+    height: 4rem;
+  }
+  main .habilidades .habilidades__container .habilidades__container__tecnologias li i {
+    font-size: 2rem;
+  }
+  main .projetos h2 {
+    font-size: 3rem;
+  }
+  main .projetos .projetos__cards {
+    max-width: 1100px;
+  }
+  main .projetos .projetos__cards .projetos__cards__card {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: center;
+  }
+  main .projetos .projetos__cards .projetos__cards__card img {
+    width: 50%;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body {
+    width: 50%;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body h3 {
+    font-size: 2.3rem;
+    text-align: center;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__descricao {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades {
+    list-style-position: inside;
+    font-size: 1.25rem;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades li {
+    width: 300px;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias li {
+    width: 4rem;
+    height: 4rem;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias li i {
+    font-size: 2.3rem;
+  }
+  main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__botoes a button {
+    width: auto;
+  }
+  main .projetos .projetos__cards .projetos__cards__card.card_reverse {
+    flex-direction: row-reverse;
+  }
+  main .sobre {
+    max-width: 1100px;
+    background-color: blue;
+  }
+  main .sobre .sobre__perfil {
+    flex-direction: row;
+  }
+  main .sobre .sobre__perfil .sobre__perfil__foto_perfil {
+    width: 410px;
+    height: 410px;
+  }
+  main .sobre .sobre__perfil .sobre__perfil__descricao {
+    background-color: orange;
+    gap: 40px;
+  }
+  main .sobre .sobre__perfil .sobre__perfil__descricao h2 {
+    font-size: 3.2rem;
+  }
+  main .sobre .sobre__perfil .sobre__perfil__descricao p,
+  main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones span,
+  main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones i, main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes span {
+    font-size: 1.1rem;
   }
   footer {
     margin-bottom: 50px;

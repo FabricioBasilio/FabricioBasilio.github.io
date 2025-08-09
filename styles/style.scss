@@ -180,8 +180,8 @@ main {
         li {
           border: 1px solid var(--text-color);
           border-radius: 50%;
-          width: 60px;
-          height: 3.5rem;
+          width: 4rem;
+          height: 4rem;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -221,13 +221,20 @@ main {
       .projetos__cards__card {
         display: flex;
         flex-direction: column;
+        // row no desktop
         gap: 10px;
+
+        img {
+          width: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+          object-position: center;
+        }
 
         .card__body {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          // background-color: blue;
 
           h3 {
             font-weight: 200;
@@ -242,10 +249,6 @@ main {
           .card__body__funcionalidades {
             list-style-type: disc;
             margin: 0 auto;
-
-            li {
-              width: fit-content;
-            }
           }
 
           .card__body__tecnologias {
@@ -256,8 +259,8 @@ main {
             li {
               border: 1px solid var(--text-color);
               border-radius: 50%;
-              width: 50px;
-              height: 3rem;
+              width: 4rem;
+              height: 4rem;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -323,7 +326,6 @@ main {
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      // sera row no responsivo
 
       margin-bottom: 500px;
 
@@ -345,6 +347,10 @@ main {
           text-transform: uppercase;
           letter-spacing: 2px;
           color: var(--primary-color);
+        }
+
+        p {
+          font-size: 1rem;
         }
 
         .descricao__icones {
@@ -370,6 +376,12 @@ main {
             padding: 15px 16px;
             border: 2px solid var(--link-color);
             color: var(--primary-color);
+          }
+
+          .descricao__botoes__conecte_se {
+            span {
+              margin-right: 10px;
+            }
           }
         }
       }
@@ -610,6 +622,108 @@ footer {
 
         .habilidades__container__tecnologias {
           width: 40%;
+
+          li {
+            width: 4rem;
+            height: 4rem;
+
+            i {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .projetos {
+      h2 {
+        font-size: 3rem;
+      }
+
+      .projetos__cards {
+        max-width: 1100px;
+
+        .projetos__cards__card {
+          flex-direction: row;
+          justify-content: space-around;
+          gap: 40px;
+          align-items: center;
+
+          img {
+            width: 50%;
+          }
+
+          .card__body {
+            width: 50%;
+
+            h3 {
+              font-size: 2.3rem;
+              text-align: center;
+            }
+
+            .card__body__descricao {
+              font-size: 1.25rem;
+              text-align: center;
+            }
+
+            .card__body__funcionalidades {
+              list-style-position: inside;
+              font-size: 1.25rem;
+
+              li {
+                width: 300px;
+              }
+            }
+
+            .card__body__tecnologias {
+              li {
+                width: 4rem;
+                height: 4rem;
+              }
+
+              li i {
+                font-size: 2.3rem;
+              }
+            }
+
+            .card__body__botoes {
+              a button {
+                width: auto;
+              }
+            }
+          }
+        }
+
+        .projetos__cards__card.card_reverse {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .sobre {
+      max-width: 1100px;
+      background-color: blue;
+
+      .sobre__perfil {
+        flex-direction: row;
+
+        .sobre__perfil__foto_perfil {
+          width: 410px;
+          height: 410px;
+        }
+        .sobre__perfil__descricao {
+          background-color: orange;
+          gap: 40px;
+
+          h2 {
+            font-size: 3.2rem;
+          }
+
+          p,
+          .descricao__icones span,
+          .descricao__icones i, .descricao__botoes span {
+            font-size: 1.1rem;
+          }
         }
       }
     }
