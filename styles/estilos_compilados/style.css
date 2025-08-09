@@ -69,8 +69,8 @@ header .nav_desktop ul li a {
   color: var(--link-color);
   text-transform: uppercase;
 }
-header .nav_desktop ul li a.active {
-  font-weight: 800;
+header .nav_desktop ul li a:hover, header .nav_desktop ul li a.active {
+  font-weight: 900;
   color: var(--primary-color);
 }
 header i {
