@@ -541,7 +541,7 @@ main {
         font-size: 1.3rem;
         cursor: pointer;
         border-radius: 50px;
-        padding: 15px 16px;
+        padding: 15px 45px;
         border: 2px solid var(--link-color);
         color: var(--primary-color);
       }
@@ -746,9 +746,25 @@ footer {
           width: 80%;
         }
 
-
         h3 {
           font-size: 2rem;
+        }
+      }
+    }
+
+    .contato {
+      .contato__container {
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        ul {
+          justify-content: center;
+          gap: 25px;
         }
       }
     }
@@ -756,5 +772,9 @@ footer {
 
   footer {
     margin-bottom: 50px;
+
+    p {
+      font-size: 1.1rem;
+    }
   }
 }

@@ -464,7 +464,7 @@ main .contato .contato__container .contato__container__botao_email button {
   font-size: 1.3rem;
   cursor: pointer;
   border-radius: 50px;
-  padding: 15px 16px;
+  padding: 15px 45px;
   border: 2px solid var(--link-color);
   color: var(--primary-color);
 }
@@ -622,8 +622,21 @@ footer p a {
   main .sobre .sobre__cursos h3 {
     font-size: 2rem;
   }
+  main .contato .contato__container h2 {
+    font-size: 2.5rem;
+  }
+  main .contato .contato__container p {
+    font-size: 1.1rem;
+  }
+  main .contato .contato__container ul {
+    justify-content: center;
+    gap: 25px;
+  }
   footer {
     margin-bottom: 50px;
+  }
+  footer p {
+    font-size: 1.1rem;
   }
 }
 
