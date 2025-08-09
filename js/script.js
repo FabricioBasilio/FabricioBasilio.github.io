@@ -1,12 +1,22 @@
 // tema escolhido pelo usuario ao carregar
 const rootHtml = document.documentElement;
+const toggleTheme = document.getElementById("toggleTheme");
 const tema = localStorage.getItem("tema");
 
-rootHtml.setAttribute("data-theme", tema);
+// quando o usuario acessar pela primeira vez ou se ele nunca clicou para alterar o tema antes
+
+if (tema && tema === "dark") {
+  toggleTheme.classList.remove("bi-moon-stars");
+  toggleTheme.classList.add("bi-sun");
+  rootHtml.setAttribute("data-theme", tema);
+} else {
+  toggleTheme.classList.remove("bi-sun");
+  toggleTheme.classList.add("bi-moon-stars");
+  rootHtml.setAttribute("data-theme", tema);
+}
+
 
 // interação do botão de tema
-
-const toggleTheme = document.getElementById("toggleTheme");
 
 toggleTheme.addEventListener("click", changeTheme);
 
