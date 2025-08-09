@@ -1,5 +1,4 @@
 @use "_reset";
-@use "_mixins";
 
 :root,
 :root[data-theme="dark"] {
@@ -41,10 +40,34 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-top: 20px;
   padding: 20px;
+  width: 100%;
+
+  .nav_desktop {
+    display: none;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      width: 500px;
+
+      li a {
+        text-decoration: none;
+        color: var(--link-color);
+        text-transform: uppercase;
+
+        &:hover,
+        &.active {
+          font-weight: 900;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
 
   i {
     color: var(--icon-color);
@@ -53,7 +76,7 @@ header {
   }
 }
 
-nav.nav_mobile {
+.nav_mobile {
   border-top: 1px solid var(--border-color);
   padding-top: 10px;
   padding-bottom: 10px;
@@ -90,14 +113,12 @@ nav.nav_mobile {
 }
 
 main {
-  margin-bottom: 30px;
 
   .apresentacao {
-    margin: 0 auto 200px auto;
-    // Deletar margin bottom depois
+    margin: 0 auto 100px auto;
     width: 95%;
     display: flex;
-    gap: 28px;
+    gap: 30px;
     flex-direction: column;
     justify-content: space-between;
 
@@ -129,7 +150,7 @@ main {
       text-transform: uppercase;
       cursor: pointer;
       border-radius: 50px;
-      padding: 15px 16px;
+      padding: 15px 30px;
       border: 2px solid var(--link-color);
       color: var(--primary-color);
     }
@@ -137,14 +158,14 @@ main {
 
   .habilidades {
     background-color: var(--secondary-bg-color);
-    margin-bottom: 300px;
-    // remover margin depois
+    margin-bottom: 100px;
 
-    div.habilidades__container {
+    .habilidades__container {
       width: 95%;
       margin: 0 auto;
       padding: 50px 0 50px 0;
       display: flex;
+      align-items: center;
       flex-direction: column;
       gap: 50px;
 
@@ -156,12 +177,13 @@ main {
       .habilidades__container__tecnologias {
         display: flex;
         justify-content: space-around;
+        gap: 50px;
 
         li {
           border: 1px solid var(--text-color);
           border-radius: 50%;
-          width: 60px;
-          height: 3.5rem;
+          width: 4rem;
+          height: 4rem;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -176,17 +198,16 @@ main {
   }
 
   .projetos {
-    margin-bottom: 50px;
+    margin-bottom: 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // remover margin depois
 
     h2 {
       font-size: 1.8rem;
       font-weight: 200;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
@@ -203,11 +224,17 @@ main {
         flex-direction: column;
         gap: 10px;
 
+        img {
+          width: 100%;
+          border-radius: 10px;
+          object-fit: cover;
+          object-position: center;
+        }
+
         .card__body {
           display: flex;
           flex-direction: column;
           gap: 20px;
-          // background-color: blue;
 
           h3 {
             font-weight: 200;
@@ -221,11 +248,9 @@ main {
 
           .card__body__funcionalidades {
             list-style-type: disc;
-            margin: 0 auto;
+            list-style-position: inside;
 
-            li {
-              width: fit-content;
-            }
+            margin: 0 auto;
           }
 
           .card__body__tecnologias {
@@ -236,8 +261,8 @@ main {
             li {
               border: 1px solid var(--text-color);
               border-radius: 50%;
-              width: 50px;
-              height: 3rem;
+              width: 4rem;
+              height: 4rem;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -303,9 +328,8 @@ main {
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      // sera row no responsivo
 
-      margin-bottom: 500px;
+      margin-bottom: 100px;
 
       .sobre__perfil__foto_perfil {
         border-radius: 50%;
@@ -327,6 +351,10 @@ main {
           color: var(--primary-color);
         }
 
+        p {
+          font-size: 1rem;
+        }
+
         .descricao__icones {
           i {
             color: var(--icon-color);
@@ -340,6 +368,7 @@ main {
         .descricao__botoes {
           display: flex;
           justify-content: space-evenly;
+          align-items: center;
 
           a button {
             background-color: transparent;
@@ -351,6 +380,12 @@ main {
             border: 2px solid var(--link-color);
             color: var(--primary-color);
           }
+
+          .descricao__botoes__conecte_se {
+            span {
+              margin-right: 10px;
+            }
+          }
         }
       }
     }
@@ -359,7 +394,7 @@ main {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      margin-bottom: 300px;
+      margin-bottom: 100px;
       color: var(--primary-color);
 
       .sobre__formacao__cards {
@@ -379,7 +414,7 @@ main {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin-bottom: 300px;
+      margin-bottom: 100px;
 
       .sobre__cursos__acordeao {
         border: 1px solid var(--border-color);
@@ -418,7 +453,6 @@ main {
 
           .acordeao__item__body {
             display: none;
-            // display será none primeiro depois flex
 
             padding: 20px;
             flex-direction: column;
@@ -427,6 +461,7 @@ main {
 
             ul {
               list-style-type: disc;
+              list-style-position: inside;
             }
           }
 
@@ -440,7 +475,6 @@ main {
 
           &.active .acordeao__item__body {
             display: flex;
-            // aparecerá ao ter essa classe
 
             &.end {
               border-radius: 0 0 5px 5px;
@@ -449,7 +483,6 @@ main {
 
           &.active .bi-caret-down {
             transform: rotate(180deg);
-            // transition: transform 0.2s linear;
           }
         }
       }
@@ -459,6 +492,7 @@ main {
   .contato {
     border-top: 1px solid var(--border-color);
     padding-top: 30px;
+    margin-bottom: 30px;
 
     a {
       text-decoration: none;
@@ -508,7 +542,7 @@ main {
         font-size: 1.3rem;
         cursor: pointer;
         border-radius: 50px;
-        padding: 15px 16px;
+        padding: 15px 45px;
         border: 2px solid var(--link-color);
         color: var(--primary-color);
       }
@@ -527,6 +561,219 @@ footer {
     a {
       text-decoration: none;
       color: var(--primary-color);
+    }
+  }
+}
+
+@media (min-width: 770px) {
+  header {
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    background-color: var(--secondary-bg-color);
+    padding: 20px;
+  }
+
+  .nav_mobile {
+    display: none;
+  }
+
+  nav.nav_desktop {
+    display: block;
+  }
+
+  main {
+    margin-top: 100px;
+
+    .apresentacao {
+      max-width: 1100px;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+
+      .apresentacao__redes_sociais {
+        i {
+          font-size: 1.8rem;
+        }
+      }
+
+      .apresentacao__botao_ver_projetos button {
+        width: auto;
+      }
+    }
+
+    .habilidades {
+      .habilidades__container {
+        max-width: 1100px;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h2 {
+          width: 60%;
+          font-size: 2.5rem;
+        }
+
+        .habilidades__container__tecnologias {
+          width: 40%;
+
+          li {
+            width: 4rem;
+            height: 4rem;
+
+            i {
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+    }
+
+    .projetos {
+      h2 {
+        font-size: 3rem;
+      }
+
+      .projetos__cards {
+        max-width: 1100px;
+
+        .projetos__cards__card {
+          flex-direction: row;
+          justify-content: space-around;
+          gap: 40px;
+          align-items: center;
+
+          img {
+            width: 50%;
+          }
+
+          .card__body {
+            width: 50%;
+
+            h3 {
+              font-size: 2.3rem;
+              text-align: center;
+            }
+
+            .card__body__descricao {
+              font-size: 1.25rem;
+              text-align: center;
+            }
+
+            .card__body__funcionalidades {
+              font-size: 1.25rem;
+
+              li {
+                width: 300px;
+              }
+            }
+
+            .card__body__tecnologias {
+              li {
+                width: 4rem;
+                height: 4rem;
+              }
+
+              li i {
+                font-size: 2.3rem;
+              }
+            }
+
+            .card__body__botoes {
+              a button {
+                width: auto;
+              }
+            }
+          }
+        }
+
+        .projetos__cards__card.card_reverse {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .sobre {
+      max-width: 1100px;
+
+      .sobre__perfil {
+        flex-direction: row;
+
+        .sobre__perfil__foto_perfil {
+          width: 410px;
+          height: 410px;
+        }
+        .sobre__perfil__descricao {
+          gap: 40px;
+
+          h2 {
+            font-size: 3.2rem;
+          }
+
+          p,
+          .descricao__icones span,
+          .descricao__icones i,
+          .descricao__botoes span {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .sobre__formacao {
+        align-items: center;
+
+        h3 {
+          font-size: 2rem;
+        }
+
+        h4 {
+          font-size: 1.3rem;
+        }
+      }
+
+      .sobre__cursos {
+        align-items: center;
+
+        .sobre__cursos__acordeao {
+          width: 80%;
+        }
+
+        h3 {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .contato {
+      
+      .contato__container {
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        ul {
+          justify-content: center;
+          gap: 25px;
+        }
+      }
+    }
+  }
+
+  footer {
+    margin-bottom: 50px;
+
+    p {
+      font-size: 1.1rem;
     }
   }
 }

@@ -16,6 +16,22 @@
   </head>
   <body>
     <header>
+      <nav class="nav_desktop">
+        <ul>
+          <li>
+            <a href="#home" class="active"> Home </a>
+          </li>
+          <li>
+            <a href="#projetos"> Projetos </a>
+          </li>
+          <li>
+            <a href="#sobre"> Sobre </a>
+          </li>
+          <li>
+            <a href="#contato"> Contato </a>
+          </li>
+        </ul>
+      </nav>
       <i id="toggleTheme" class="bi bi-sun"></i>
     </header>
     <nav class="nav_mobile">
@@ -81,8 +97,8 @@
           </ul>
         </div>
       </section>
-      <section class="projetos">
-        <h2 id="projetos">Projetos</h2>
+      <section id="projetos" class="projetos">
+        <h2>Projetos</h2>
         <div class="projetos__cards">
           <section class="projetos__cards__card">
             <img
@@ -112,7 +128,7 @@
               </div>
             </section>
           </section>
-          <section class="projetos__cards__card">
+          <section class="projetos__cards__card card_reverse">
             <img
               src="./assets/imagens-projetos/desafio-responsividade-dio/desafio-responsividade-dio-1.png"
               alt="Imagem do projeto Desafio Responsividade DIO"
@@ -194,7 +210,7 @@
             <i class="bi bi-arrow-up-right"></i></button
         ></a>
       </section>
-      <section class="sobre">
+      <section id="sobre" class="sobre">
         <section class="sobre__perfil">
           <img
             src="./assets/foto-perfil-2.jpg"
@@ -202,7 +218,7 @@
             class="sobre__perfil__foto_perfil"
           />
           <div class="sobre__perfil__descricao">
-            <h2 id="sobre">Sobre mim</h2>
+            <h2>Sobre mim</h2>
             <p>
               Sou um desenvolvedor front-end. Tenho conhecimento em HTML5, CSS3
               e Javascript. Desenvolvi projetos simples, mas que marcam o início
@@ -216,7 +232,7 @@
               <a
                 href="https://www.linkedin.com/in/fabricio-basilio-front-end/"
                 target="_blank"
-                ><button>
+                ><button class="descricao__botoes__conecte_se">
                   <span>Conecte-se comigo</span
                   ><i class="bi bi-arrow-up-right"> </i></button></a
               ><a href="#" target="_blank"
@@ -278,11 +294,19 @@
               <div class="acordeao__item__body">
                 <p>Digital Innovation One. Jul 2025. 6h.</p>
                 <p>
-                  Aplicação de cores e sombras nos elementos. Estilização de imagens, de bordas e de fundos dos elementos. Trabalho com fontes como também com textos. E outras propriedades como transparência dos elementos, lidar com elementos maiores que o container e aplicação de redefinição das propriedades CSS padrão dos navegadores.
+                  Aplicação de cores e sombras nos elementos. Estilização de
+                  imagens, de bordas e de fundos dos elementos. Trabalho com
+                  fontes como também com textos. E outras propriedades como
+                  transparência dos elementos, lidar com elementos maiores que o
+                  container e aplicação de redefinição das propriedades CSS
+                  padrão dos navegadores.
                 </p>
                 <ul class="body__habilidades">
                   <li>Estilização com CSS;</li>
-                  <li>Aplicação de redefinição das propriedades CSS padrão dos navegadores.</li>
+                  <li>
+                    Aplicação de redefinição das propriedades CSS padrão dos
+                    navegadores.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -294,12 +318,18 @@
               <div class="acordeao__item__body end">
                 <p>Digital Innovation One. Jul 2025. 3h.</p>
                 <p>
-                  O que é o Design Responsivo. Uso de Layouts flexíveis com multicolunas, com FlexBox e com Grid. O que é a meta tag viewport. O que são Media Queries (Estrutura e Media types). O que são Media Features, operadores lógicos nos Media Queries como também como usar as Media Queries. Breakpoints. Como deixar as imagens e a tipografia responsivas. Aplicação da abordagem Mobile First.
+                  O que é o Design Responsivo. Uso de Layouts flexíveis com
+                  multicolunas, com FlexBox e com Grid. O que é a meta tag
+                  viewport. O que são Media Queries (Estrutura e Media types). O
+                  que são Media Features, operadores lógicos nos Media Queries
+                  como também como usar as Media Queries. Breakpoints. Como
+                  deixar as imagens e a tipografia responsivas. Aplicação da
+                  abordagem Mobile First.
                 </p>
                 <ul class="body__habilidades">
-                  <li>Uso do FlexBox.</li>
-                  <li>Uso de Media Queries.</li>
-                  <li>Aplicação da abordagem Mobile First</li>
+                  <li>Uso do FlexBox;</li>
+                  <li>Uso de Media Queries;</li>
+                  <li>Aplicação da abordagem Mobile First.</li>
                 </ul>
               </div>
             </div>
@@ -307,9 +337,9 @@
         </section>
       </section>
 
-      <section class="contato">
+      <section id="contato" class="contato">
         <div class="contato__container">
-          <h2 id="contato">Contate-me</h2>
+          <h2>Contate-me</h2>
           <p>
             Contate-me via e-mail e conecte-se comigo através das minhas redes
             sociais.
@@ -328,7 +358,7 @@
               >
             </li>
           </ul>
-          <a href="#" class="contato__container__botao_email"
+          <a href="mailto:fabriciobasilioo@gmail.com" class="contato__container__botao_email"
             ><button><span>fabriciobasilioo@gmail.com</span></button></a
           >
         </div>

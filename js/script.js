@@ -1,19 +1,47 @@
 const rootHtml = document.documentElement;
 const toggleTheme = document.getElementById("toggleTheme");
+const tema = localStorage.getItem("tema");
+
+
+if (tema && tema === "dark") {
+  toggleTheme.classList.remove("bi-moon-stars");
+  toggleTheme.classList.add("bi-sun");
+  rootHtml.setAttribute("data-theme", tema);
+} else {
+  toggleTheme.classList.remove("bi-sun");
+  toggleTheme.classList.add("bi-moon-stars");
+  rootHtml.setAttribute("data-theme", tema);
+}
+
+
 
 toggleTheme.addEventListener("click", changeTheme);
 
 function changeTheme() {
   const currentTheme = rootHtml.getAttribute("data-theme");
 
-  if (currentTheme === "dark") rootHtml.setAttribute("data-theme", "light");
-  else rootHtml.setAttribute("data-theme", "dark");
-    
+  if (currentTheme === "dark") {
+    rootHtml.setAttribute("data-theme", "light");
+    localStorage.setItem("tema", "light");
+  } else {
+    rootHtml.setAttribute("data-theme", "dark");
+    localStorage.setItem("tema", "dark");
+  }
+
   toggleTheme.classList.toggle("bi-sun");
   toggleTheme.classList.toggle("bi-moon-stars");
 }
 
-// interatividade do acordeao
+const menuLinks = document.querySelectorAll(".nav_desktop a");
+console.log(menuLinks);
+
+menuLinks.forEach((menuLink) => {
+  menuLink.addEventListener("click", () => {
+    menuLinks.forEach((i) => i.classList.remove("active"));
+    menuLink.classList.add("active");
+  });
+});
+
 const acordeaoHeaders = document.querySelectorAll(".acordeao__item__header");
 
 acordeaoHeaders.forEach((header) => {
