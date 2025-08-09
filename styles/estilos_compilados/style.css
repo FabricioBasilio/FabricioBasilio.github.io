@@ -228,6 +228,7 @@ main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__
 }
 main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades {
   list-style-type: disc;
+  list-style-position: inside;
   margin: 0 auto;
 }
 main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__tecnologias {
@@ -401,6 +402,7 @@ main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__i
 }
 main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item .acordeao__item__body ul {
   list-style-type: disc;
+  list-style-position: inside;
 }
 main .sobre .sobre__cursos .sobre__cursos__acordeao .acordeao__item.active .acordeao__item__header {
   background-color: var(--secondary-bg-color);
@@ -563,7 +565,6 @@ footer p a {
     text-align: center;
   }
   main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades {
-    list-style-position: inside;
     font-size: 1.25rem;
   }
   main .projetos .projetos__cards .projetos__cards__card .card__body .card__body__funcionalidades li {
