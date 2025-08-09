@@ -1,4 +1,11 @@
+// tema escolhido pelo usuario ao carregar
 const rootHtml = document.documentElement;
+const tema = localStorage.getItem("tema");
+
+rootHtml.setAttribute("data-theme", tema);
+
+// interação do botão de tema
+
 const toggleTheme = document.getElementById("toggleTheme");
 
 toggleTheme.addEventListener("click", changeTheme);
@@ -6,8 +13,13 @@ toggleTheme.addEventListener("click", changeTheme);
 function changeTheme() {
   const currentTheme = rootHtml.getAttribute("data-theme");
 
-  if (currentTheme === "dark") rootHtml.setAttribute("data-theme", "light");
-  else rootHtml.setAttribute("data-theme", "dark");
+  if (currentTheme === "dark") {
+    rootHtml.setAttribute("data-theme", "light");
+    localStorage.setItem("tema", "light");
+  } else {
+    rootHtml.setAttribute("data-theme", "dark");
+    localStorage.setItem("tema", "dark");
+  }
 
   toggleTheme.classList.toggle("bi-sun");
   toggleTheme.classList.toggle("bi-moon-stars");
