@@ -191,7 +191,7 @@ main .projetos h2 {
   font-size: 1.8rem;
   font-weight: 200;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -325,6 +325,7 @@ main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones span {
 main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes a button {
   background-color: transparent;
@@ -583,7 +584,6 @@ footer p a {
   }
   main .sobre {
     max-width: 1100px;
-    background-color: blue;
   }
   main .sobre .sobre__perfil {
     flex-direction: row;
@@ -593,7 +593,6 @@ footer p a {
     height: 410px;
   }
   main .sobre .sobre__perfil .sobre__perfil__descricao {
-    background-color: orange;
     gap: 40px;
   }
   main .sobre .sobre__perfil .sobre__perfil__descricao h2 {
@@ -601,8 +600,27 @@ footer p a {
   }
   main .sobre .sobre__perfil .sobre__perfil__descricao p,
   main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones span,
-  main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones i, main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes span {
+  main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__icones i,
+  main .sobre .sobre__perfil .sobre__perfil__descricao .descricao__botoes span {
     font-size: 1.1rem;
+  }
+  main .sobre .sobre__formacao {
+    align-items: center;
+  }
+  main .sobre .sobre__formacao h3 {
+    font-size: 2rem;
+  }
+  main .sobre .sobre__formacao h4 {
+    font-size: 1.3rem;
+  }
+  main .sobre .sobre__cursos {
+    align-items: center;
+  }
+  main .sobre .sobre__cursos .sobre__cursos__acordeao {
+    width: 80%;
+  }
+  main .sobre .sobre__cursos h3 {
+    font-size: 2rem;
   }
   footer {
     margin-bottom: 50px;
